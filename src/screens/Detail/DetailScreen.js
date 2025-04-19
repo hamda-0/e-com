@@ -40,11 +40,13 @@ const DetailScreen = ({ route }) => {
     <SafeAreaView style={styles.safeArea}>
       <ScrollView style={styles.container}>
         <ImageBackground
+        testID="product-image" 
           source={{ uri: item.image }}
           style={styles.imageBackground}
           resizeMode="cover">
           <View style={styles.header}>
             <CircularBtn
+             testID="back-button"
               onPress={() => GoBack()}
               siz={24}
               icon={<Ionicons name="arrow-back" size={24} color={COLORS.black_100} />}
@@ -68,7 +70,9 @@ const DetailScreen = ({ route }) => {
         <Spacer height={70} /> 
       </ScrollView>
       {/* add to cart */}
-      <AddToCartButton price={item.price} onPress={handleAddToCart} />
+      <AddToCartButton 
+      testID="add-to-cart-btn"
+      price={item.price} onPress={handleAddToCart} />
     </SafeAreaView>
   );
 };
