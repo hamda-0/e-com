@@ -6,7 +6,6 @@ const cartSlice = createSlice({
     items: [],
     totalQuantity: 0,
     totalAmount: 0,
-    selectedCart:[]
   },
   reducers: {
     addItemToCart(state, action) {
@@ -64,18 +63,9 @@ const cartSlice = createSlice({
       state.totalQuantity = 0;
       state.totalAmount = 0;
     },
-    toggleItemSelection(state, action) {
-      const item = action.payload;
-      const existingIndex = state.selectedCart.findIndex(i => i.id === item.id);
-      
-      if (existingIndex >= 0) {
-        state.selectedCart.splice(existingIndex, 1);
-      } else {
-        state.selectedCart.push(item);
-      }
-    },
+    
   },
 });
 
-export const { addItemToCart, removeItemFromCart, clearCart,toggleItemSelection ,deleteItemFromCart} = cartSlice.actions;
+export const { addItemToCart, removeItemFromCart, clearCart ,deleteItemFromCart} = cartSlice.actions;
 export default cartSlice.reducer;
