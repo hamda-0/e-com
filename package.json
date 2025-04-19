@@ -7,7 +7,11 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test:redux": "jest __tests__/store/ --watch",
+    "test:detail": "jest __tests__/screens/Detail/ --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:clear": "jest --clearCache"
   },
   "dependencies": {
     "@react-native-community/checkbox": "^0.5.17",
@@ -39,13 +43,15 @@
     "@react-native/eslint-config": "0.77.1",
     "@react-native/metro-config": "0.77.1",
     "@react-native/typescript-config": "0.77.1",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^13.2.0",
     "@types/jest": "^29.5.13",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "eslint": "^8.19.0",
-    "jest": "^29.6.3",
+    "jest": "^29.7.0",
     "prettier": "2.8.8",
-    "react-test-renderer": "18.3.1",
+    "react-test-renderer": "^18.3.1",
     "typescript": "5.0.4"
   },
   "engines": {
